@@ -5,14 +5,13 @@ import ij.ImagePlus;
 import ij.gui.NewImage;
 import ij.process.ImageProcessor;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
-import net.haesleinhuepf.clij.macro.AbstractMacroPluginTest;
 import net.haesleinhuepf.clijx.CLIJx;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class DilateBoxTest extends AbstractMacroPluginTest {
+public class DilateBoxTest {
 
     @Test
     public void test_dilateBox_3d() {
