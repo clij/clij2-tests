@@ -7,7 +7,7 @@ import net.haesleinhuepf.clijx.CLIJx;
 import net.haesleinhuepf.clijx.plugins.AverageAngleBetweenAdjacentTriangles;
 import net.imglib2.img.array.ArrayImgs;
 
-public class averageAngleBetweenAdjacentTrianglesTest {
+public class AverageAngleBetweenAdjacentTrianglesTest {
     public static void main(String[] args) {
         CLIJx clijx = CLIJx.getInstance();
 
