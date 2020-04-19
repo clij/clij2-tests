@@ -1,0 +1,26 @@
+package net.haesleinhuepf.clij2.plugins;
+
+import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
+import net.haesleinhuepf.clij2.CLIJ2;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class CountNonZeroPixelsTest {
+    @Test
+    public void test() {
+        CLIJ2 clij2 = CLIJ2.getInstance();
+
+        ClearCLBuffer in1 = clij2.pushString("" +
+                "1 0 0 0 0 0 0 0\n" +
+                "1 1 1 1 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0\n" +
+                "0 0 0 0 0 0 0 0");
+
+        double count = clij2.countNonZeroPixels(in1);
+
+        assertEquals(5, count, 0);
+
+        clij2.clear();
+    }
+}
