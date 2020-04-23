@@ -32,4 +32,31 @@ public class LabelledSpotsToPointListTest {
 
         clij2.clear();
     }
+
+    @Test
+    public void test2() {
+        CLIJ2 clij2 = CLIJ2.getInstance();
+        ClearCLBuffer image = clij2.pushString(""+
+                "0 0 0 0 0\n" +
+                "0 0 1 0 1\n" +
+                "0 1 0 0 0\n" +
+                "0 0 0 1 0\n" +
+                "1 0 0 0 0"
+        );
+
+        ClearCLBuffer ref = clij2.pushString(""+
+                "2 4 1 3 0\n" +
+                "1 1 2 3 4\n" +
+                "0 0 0 0 0");
+
+        ClearCLBuffer pointlist = clij2.create(5, 3, 1);
+
+        clij2.spotsToPointList(image, pointlist);
+
+        System.out.println(clij2.pullString(pointlist));
+
+        double mse = clij2.meanSquaredError(pointlist, ref);
+        System.out.println(mse);
+
+    }
 }

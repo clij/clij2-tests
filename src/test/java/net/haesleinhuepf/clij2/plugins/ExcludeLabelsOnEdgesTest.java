@@ -5,6 +5,7 @@ import ij.ImagePlus;
 import net.haesleinhuepf.clij.CLIJ;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.coremem.enums.NativeTypeEnum;
+import net.haesleinhuepf.clij2.CLIJ2;
 import net.haesleinhuepf.clij2.plugins.ExcludeLabelsOnEdges;
 import net.haesleinhuepf.clijx.CLIJx;
 import org.junit.Test;
@@ -19,26 +20,26 @@ public class ExcludeLabelsOnEdgesTest {
         ImagePlus imp = IJ.openImage("src/test/resources/blobs.tif");
 
 
-        CLIJx clijx = CLIJx.getInstance();
+        CLIJ2 clij2 = CLIJ2.getInstance();
 
-        ClearCLBuffer input = clijx.push(imp);
-        ClearCLBuffer thresholded = clijx.create(input.getDimensions(), NativeTypeEnum.Float);
-        ClearCLBuffer connectedComponents = clijx.create(input.getDimensions(), NativeTypeEnum.Float);
-        ClearCLBuffer withoutEdges = clijx.create(input.getDimensions(), NativeTypeEnum.Float);
+        ClearCLBuffer input = clij2.push(imp);
+        ClearCLBuffer thresholded = clij2.create(input.getDimensions(), NativeTypeEnum.Float);
+        ClearCLBuffer connectedComponents = clij2.create(input.getDimensions(), NativeTypeEnum.Float);
+        ClearCLBuffer withoutEdges = clij2.create(input.getDimensions(), NativeTypeEnum.Float);
 
-        clijx.threshold(input, thresholded, 127f);
-        clijx.show(thresholded, "thresholded");
-        connectedComponentsLabeling(clijx, thresholded, connectedComponents);
+        clij2.threshold(input, thresholded, 127f);
+        clij2.show(thresholded, "thresholded");
+        clij2.connectedComponentsLabelingBox(thresholded, connectedComponents);
 
-        ExcludeLabelsOnEdges.excludeLabelsOnEdges(clijx, connectedComponents, withoutEdges);
+        clij2.excludeLabelsOnEdges(connectedComponents, withoutEdges);
 
 
         //new ImageJ();
         //clij.show(withoutEdges, "w");
         //new WaitForUserDialog("dd").show();
 
-        assertEquals(64.0, clijx.maximumOfAllPixels(connectedComponents), 0.1);
-        assertEquals(46.0, clijx.maximumOfAllPixels(withoutEdges), 0.1);
+        assertEquals(64.0, clij2.maximumOfAllPixels(connectedComponents), 0.1);
+        assertEquals(46.0, clij2.maximumOfAllPixels(withoutEdges), 0.1);
 
 
         //clij.show(output, "result");
