@@ -6,9 +6,12 @@ import ij.ImagePlus;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij2.plugins.ExcludeLabelsOnSurface;
 import net.haesleinhuepf.clijx.CLIJx;
+import org.junit.Test;
 
 public class ExcludeLabelsOnSurfaceTest {
-    public static void main(String... args) {
+    //public static void main(String... args) {
+    @Test
+    public void execTest() {
         CLIJx clijx = CLIJx.getInstance();
         ImagePlus imp = IJ.openImage("src/test/resources/blobs.tif");
 
