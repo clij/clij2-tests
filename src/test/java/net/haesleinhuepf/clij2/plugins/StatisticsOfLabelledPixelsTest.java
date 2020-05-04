@@ -67,4 +67,47 @@ public class StatisticsOfLabelledPixelsTest {
         clij2.clear();
     }
 
+    @Test
+    public void testAspectRatio() {
+        CLIJ2 clij2 = CLIJ2.getInstance();
+
+        ClearCLBuffer labelmap = clij2.pushString("" +
+                "1 1 1 1 1 2 2 2\n"+
+                "1 1 1 1 1 2 2 2\n"+
+                "1 1 1 1 1 2 2 2\n\n"+
+                "1 1 1 1 1 2 2 2\n"+
+                "1 1 1 1 1 2 2 2\n"+
+                "1 1 1 1 1 2 2 2\n\n"+
+                "1 1 1 1 1 2 2 2\n"+
+                "1 1 1 1 1 2 2 2\n"+
+                "1 1 1 1 1 2 2 2"
+        );
+
+        double[][] stats = clij2.statisticsOfLabelledPixels(labelmap, labelmap);
+
+        assertEquals(2.449489742783178, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_DISTANCE_TO_MASS_CENTER.value], 0.0001);
+        assertEquals(1.7320508075688772, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_DISTANCE_TO_MASS_CENTER.value], 0.0001);
+
+        assertEquals(2.449489742783178, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_DISTANCE_TO_CENTROID.value], 0.0001);
+        assertEquals(1.7320508075688772, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_DISTANCE_TO_CENTROID.value], 0.0001);
+
+        assertEquals(2, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_X.value, 0.0001);
+        assertEquals(1, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_Y.value], 0.0001);
+        assertEquals(1, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_Z.value], 0.0001);
+
+        assertEquals(1.4075472387377392, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_CENTROID_RADIO.value], 0.0001);
+        assertEquals(1.4075472387377392, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_MASS_CENTER_RADIO.value], 0.0001);
+
+        assertEquals(1.269867513096764, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_CENTROID_RADIO.value], 0.0001);
+        assertEquals(1.269867513096764, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_MASS_CENTER_RADIO.value], 0.0001);
+
+
+
+
+
+
+
+    }
+
+
 }
