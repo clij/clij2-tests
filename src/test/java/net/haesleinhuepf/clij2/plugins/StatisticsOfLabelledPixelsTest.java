@@ -95,11 +95,11 @@ public class StatisticsOfLabelledPixelsTest {
         assertEquals(1, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_Y.value], 0.0001);
         assertEquals(1, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_Z.value], 0.0001);
 
-        assertEquals(1.4075472387377392, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_CENTROID_RADIO.value], 0.0001);
-        assertEquals(1.4075472387377392, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_MASS_CENTER_RADIO.value], 0.0001);
+        assertEquals(1.4075472387377392, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_CENTROID_RATIO.value], 0.0001);
+        assertEquals(1.4075472387377392, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_MASS_CENTER_RATIO.value], 0.0001);
 
-        assertEquals(1.269867513096764, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_CENTROID_RADIO.value], 0.0001);
-        assertEquals(1.269867513096764, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_MASS_CENTER_RADIO.value], 0.0001);
+        assertEquals(1.269867513096764, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_CENTROID_RATIO.value], 0.0001);
+        assertEquals(1.269867513096764, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_MEAN_DISTANCE_TO_MASS_CENTER_RATIO.value], 0.0001);
 
 
 
