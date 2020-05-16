@@ -91,7 +91,7 @@ public class StatisticsOfLabelledPixelsTest {
         assertEquals(2.449489742783178, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_DISTANCE_TO_CENTROID.value], 0.0001);
         assertEquals(1.7320508075688772, stats[1][StatisticsOfLabelledPixels.STATISTICS_ENTRY.MAX_DISTANCE_TO_CENTROID.value], 0.0001);
 
-        assertEquals(2, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_X.value, 0.0001);
+        assertEquals(2, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_X.value], 0.0001);
         assertEquals(1, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_Y.value], 0.0001);
         assertEquals(1, stats[0][StatisticsOfLabelledPixels.STATISTICS_ENTRY.CENTROID_Z.value], 0.0001);
 
