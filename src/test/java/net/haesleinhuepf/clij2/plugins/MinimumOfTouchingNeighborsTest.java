@@ -8,7 +8,7 @@ import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij2.CLIJ2;
 import org.junit.Test;
 
-public class MinimumOfTouchingNeighbors {
+public class MinimumOfTouchingNeighborsTest {
 
 //    public static void main(String[] args) {
     @Test

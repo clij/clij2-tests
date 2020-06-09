@@ -31,7 +31,7 @@ public class BinaryFillHolesTest {
 
         ClearCLBuffer result = clij2.create(input_image);
 
-        BinaryFillHoles.binaryFillHoles(clij2, input_image, result);
+        clij2.binaryFillHoles(input_image, result);
 
         System.out.println("Result: ");
         clij2.print(result);
