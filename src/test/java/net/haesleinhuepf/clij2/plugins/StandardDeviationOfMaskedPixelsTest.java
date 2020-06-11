@@ -28,7 +28,7 @@ public class StandardDeviationOfMaskedPixelsTest {
         // ERROR
         double stdDev = StandardDeviationOfMaskedPixels.standardDeviationOfMaskedPixels(clijx, input, mask);
 
-        imp.setRoi(new Roi(10,10, 20, 20));
+        imp.setRoi(new Roi(10,10, 21, 21));
         double stdDevRef = imp.getStatistics().stdDev;
 
         System.out.println("stdDev: " + stdDev);

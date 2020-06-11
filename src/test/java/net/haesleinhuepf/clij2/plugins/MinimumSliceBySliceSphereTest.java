@@ -7,12 +7,13 @@ import ij.ImagePlus;
 import ij.plugin.Duplicator;
 import net.haesleinhuepf.clij.test.TestUtilities;
 import net.haesleinhuepf.clijx.CLIJx;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class MinimumSliceBySliceSphereTest {
-  //  @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void minimumSliceBySlice() {
         CLIJx clijx = CLIJx.getInstance();
@@ -43,7 +44,7 @@ public class MinimumSliceBySliceSphereTest {
         clijx.clear();
     }
 
- //   @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void minimumSliceBySlice_Buffer() {
         CLIJx clijx = CLIJx.getInstance();

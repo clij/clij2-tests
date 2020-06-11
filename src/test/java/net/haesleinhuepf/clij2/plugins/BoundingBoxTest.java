@@ -24,7 +24,7 @@ public class BoundingBoxTest {
         double[] bb = clij2.boundingBox(buffer);
         System.out.println("bb " + Arrays.toString(bb));
 
-        double[] reference = {10, 10, 0, 20, 20, 0};
+        double[] reference = {10, 10, 0, 21, 21, 0};
         assertTrue(Arrays.equals(reference, bb));
 
         clij2.clear();
@@ -43,7 +43,7 @@ public class BoundingBoxTest {
         double[] bb = clij2.boundingBox(buffer);
         System.out.println("bb " + Arrays.toString(bb));
 
-        double[] reference = {10, 10, 2, 20, 20, 7};
+        double[] reference = {10, 10, 2, 21, 21, 8};
         assertTrue(Arrays.equals(reference, bb));
 
         clij2.clear();

@@ -8,13 +8,14 @@ import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.clearcl.ClearCLImage;
 import net.haesleinhuepf.clij.test.TestUtilities;
 import net.haesleinhuepf.clijx.CLIJx;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
 public class MedianSliceBySliceSphereTest {
 
-    //@Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void medianSliceBySlice() {
         CLIJx clijx = CLIJx.getInstance();
@@ -45,7 +46,7 @@ public class MedianSliceBySliceSphereTest {
         clijx.clear();
     }
 
-    //@Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void medianSliceBySlice_Buffer() {
         CLIJx clijx = CLIJx.getInstance();

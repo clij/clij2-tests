@@ -31,8 +31,8 @@ public class CountNonZeroPixelsSliceBySliceSphereTest {
 
         ClearCLBuffer ref = clij2.pushString("" +
                 "0 0 0 0 0 0 0 0 0\n" +
-                "0 0 0 0 0 0 0 0 0\n" +
-                "0 0 0 0 0 0 0 0 0\n" +
+                "0 1 0 0 0 0 0 0 0\n" +
+                "0 1 1 1 1 0 0 0 0\n" +
                 "0 0 0 0 0 0 0 0 0\n\n" +
 
                 "0 1 0 0 0 0 0 0 0\n" +
@@ -41,8 +41,8 @@ public class CountNonZeroPixelsSliceBySliceSphereTest {
                 "0 1 1 1 1 0 0 0 0\n\n" +
 
                 "0 0 0 0 0 0 0 0 0\n" +
-                "0 0 0 0 0 0 0 0 0\n" +
-                "0 0 0 0 0 0 0 0 0\n" +
+                "0 1 0 0 0 0 0 0 0\n" +
+                "0 1 1 1 1 0 0 0 0\n" +
                 "0 0 0 0 0 0 0 0 0"
         );
         ClearCLBuffer out = clij2.create(in1);

@@ -7,12 +7,13 @@ import ij.ImagePlus;
 import ij.plugin.Duplicator;
 import net.haesleinhuepf.clij.test.TestUtilities;
 import net.haesleinhuepf.clijx.CLIJx;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class Minimum2DSphereTest {
-   // @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void minimum2d() {
         CLIJx clijx = CLIJx.getInstance();
@@ -44,7 +45,7 @@ public class Minimum2DSphereTest {
         clijx.clear();
     }
 
-   // @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void minimum2d_Buffers() {
         CLIJx clijx = CLIJx.getInstance();

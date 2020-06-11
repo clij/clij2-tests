@@ -8,13 +8,14 @@ import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.clearcl.ClearCLImage;
 import net.haesleinhuepf.clij.test.TestUtilities;
 import net.haesleinhuepf.clij2.CLIJ2;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
 public class MaximumSliceBySliceSphereTest {
 
-    //@Ignore //ignore test as we know and need to accept that maximumSliceBySlice does not do the same as ImageJ
+    @Ignore //ignore test as we know and need to accept that maximumSliceBySlice does not do the same as ImageJ
     @Test
     public void maximumSliceBySlice() {
         CLIJ2 clij2 = CLIJ2.getInstance();
@@ -45,7 +46,7 @@ public class MaximumSliceBySliceSphereTest {
         clij2.clear();
     }
 
-    //@Ignore //ignore test as we know and need to accept that maximumSliceBySlice does not do the same as ImageJ
+    @Ignore //ignore test as we know and need to accept that maximumSliceBySlice does not do the same as ImageJ
     @Test
     public void maximumSliceBySlice_Buffer() {
         CLIJ2 clij2 = CLIJ2.getInstance();

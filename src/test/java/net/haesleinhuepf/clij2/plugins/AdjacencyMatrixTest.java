@@ -22,11 +22,11 @@ public class AdjacencyMatrixTest {
         ));
 
         ClearCLBuffer ref = clij2.push(ArrayImgs.floats(new float[]{
-                        1, 1, 1, 0, 0,
-                        1, 1, 1, 1, 0,
-                        1, 1, 1, 0, 1,
-                        0, 1, 0, 1, 0,
-                        0, 0, 1, 0, 1
+                        0, 1, 1, 0, 0,
+                        1, 0, 1, 1, 0,
+                        1, 1, 0, 0, 1,
+                        0, 1, 0, 0, 0,
+                        0, 0, 1, 0, 0
                 }, new long[]{5, 5}
         ));
 

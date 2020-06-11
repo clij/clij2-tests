@@ -13,13 +13,13 @@ public class SetRowTest {
 
         ClearCLBuffer image = clij2.pushString("" +
                 "1 1 0 0\n" +
-                "1 1 2 2\n\n" +
+                "1 1 2 2\n" +
                 "1 1 0 0\n" +
                 "1 1 2 2");
 
         ClearCLBuffer ref = clij2.pushString("" +
                 "1 1 0 0\n" +
-                "1 1 2 2\n\n" +
+                "1 1 2 2\n" +
                 "4 4 4 4\n" +
                 "1 1 2 2");
         clij2.setRow(image, 2, 4);

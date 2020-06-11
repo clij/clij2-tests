@@ -25,8 +25,8 @@ public class DrawBoxTest {
 
         assertEquals(box[0], x, 0);
         assertEquals(box[1], y, 0);
-        assertEquals(box[3], w, 0);
-        assertEquals(box[4], h, 0);
+        assertEquals(box[3], w + 1, 0);
+        assertEquals(box[4], h + 1, 0);
 
         //clijx.op.drawLine(image, 10f, 10f, 0f, 10f, 50f, 0f, 5f);
 
@@ -55,9 +55,9 @@ public class DrawBoxTest {
         assertEquals(box[0], x, 0);
         assertEquals(box[1], y, 0);
         assertEquals(box[2], z, 0);
-        assertEquals(box[3], w, 0);
-        assertEquals(box[4], h, 0);
-        assertEquals(box[5], d, 0);
+        assertEquals(box[3], w + 1, 0);
+        assertEquals(box[4], h + 1, 0);
+        assertEquals(box[5], d + 1, 0);
 
         //clijx.op.drawLine(image, 10f, 10f, 0f, 10f, 50f, 0f, 5f);
 

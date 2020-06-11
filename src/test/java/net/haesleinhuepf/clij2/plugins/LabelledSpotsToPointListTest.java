@@ -49,7 +49,7 @@ public class LabelledSpotsToPointListTest {
                 "1 1 2 3 4\n" +
                 "0 0 0 0 0");
 
-        ClearCLBuffer pointlist = clij2.create(5, 3, 1);
+        ClearCLBuffer pointlist = clij2.create(5, 3);
 
         clij2.spotsToPointList(image, pointlist);
 

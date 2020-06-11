@@ -27,7 +27,7 @@ public class MeanOfMaskedPixelsTest {
 
         double mean = MeanOfMaskedPixels.meanOfMaskedPixels(clijx, input, mask);
 
-        imp.setRoi(new Roi(10,10, 20, 20));
+        imp.setRoi(new Roi(10,10, 21, 21));
         double meanRef = imp.getStatistics().mean;
 
         System.out.println("mean: " + mean);

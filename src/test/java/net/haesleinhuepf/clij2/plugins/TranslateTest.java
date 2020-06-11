@@ -13,13 +13,13 @@ public class TranslateTest {
 
         ClearCLBuffer img = clij2.pushString("" +
                 "0 0 0 0\n" +
-                "1 0 0 0\n" +
+                "1 0 0 0\n\n" +
                 "2 3 0 0\n" +
                 "0 0 0 0");
 
         ClearCLBuffer ref = clij2.pushString("" +
                 "0 0 0 0\n" +
-                "0 1 0 0\n" +
+                "0 1 0 0\n\n" +
                 "0 2 3 0\n" +
                 "0 0 0 0");
 

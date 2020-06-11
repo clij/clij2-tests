@@ -8,12 +8,13 @@ import ij.gui.Roi;
 import ij.plugin.Duplicator;
 import net.haesleinhuepf.clij.test.TestUtilities;
 import net.haesleinhuepf.clijx.CLIJx;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class Minimum3DBoxTest {
-  //  @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void minimum3dSeparable() throws InterruptedException {
         CLIJx clijx = CLIJx.getInstance();
@@ -46,7 +47,7 @@ public class Minimum3DBoxTest {
         clijx.clear();
     }
 
- //   @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void minimum3dSeparable_Buffer() throws InterruptedException {
         CLIJx clijx = CLIJx.getInstance();

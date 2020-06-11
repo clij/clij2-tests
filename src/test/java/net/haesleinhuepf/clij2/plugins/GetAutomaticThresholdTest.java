@@ -21,7 +21,7 @@ public class GetAutomaticThresholdTest {
 
         System.out.println(threshold);
 
-        assertEquals(1, threshold, 0);
+        assertEquals(3, threshold, 0);
 
         clij2.clear();
     }

@@ -7,12 +7,13 @@ import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.clearcl.ClearCLImage;
 import net.haesleinhuepf.clij.test.TestUtilities;
 import net.haesleinhuepf.clijx.CLIJx;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;
 
 public class Median2DSphereTest {
-    //@Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void median2d() {
         CLIJx clijx = CLIJx.getInstance();
@@ -43,7 +44,7 @@ public class Median2DSphereTest {
         clijx.clear();
     }
 
-    //@Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
+    @Ignore //ignore test as we know and need to accept that the tested method does not do the same its ImageJ counterpart
     @Test
     public void median2d_Buffers() {
         CLIJx clijx = CLIJx.getInstance();
