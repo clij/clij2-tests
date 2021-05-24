@@ -6,9 +6,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class StandardDeviationOfTouchingNeighborsMapTest {
+public class MeanOfTouchingNeighborsMapTest {
     @Test
-    public void standardDeviationOfTouchingNeighborsMapTest() {
+    public void meanOfTouchingNeighborsMapTest() {
 
         CLIJ2 clij2 = CLIJ2.getInstance();
 
@@ -27,14 +27,14 @@ public class StandardDeviationOfTouchingNeighborsMapTest {
         });
 
         ClearCLBuffer gpu_reference = clij2.pushMat(new double[][]{
-                {0.9660918, 0.9660918, 1.67332, 1.67332},
-                {0.9660918, 0, 0, 1.67332},
-                {1.5916449, 0, 0, 1.264911},
-                {1.5916449, 1.5916449, 1.264911, 1.264911}
+                {2.3333335,2.3333335,3,3},
+                {2.3333335,0,0,3},
+                {3.6666667,0,0,4},
+                {3.6666667,3.6666667,4,4}
         });
 
         ClearCLBuffer gpu_output = clij2.create(gpu_reference);
-        clij2.standardDeviationOfTouchingNeighborsMap(gpu_intensities, gpu_labels, gpu_output, 1, true);
+        clij2.meanOfTouchingNeighborsMap(gpu_intensities, gpu_labels, gpu_output, 1, true);
 
         clij2.print(gpu_output);
 
