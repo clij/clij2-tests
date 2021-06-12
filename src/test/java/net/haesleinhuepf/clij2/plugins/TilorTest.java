@@ -7,11 +7,13 @@ import ij.plugin.Duplicator;
 import net.haesleinhuepf.clij.CLIJ;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij2.CLIJ2;
+import org.junit.Ignore;
 import org.junit.Test;
 
 public class TilorTest {
 //    public static void main(String... args) {
 
+    @Ignore
     @Test
     public void testTilor() {
         //new ImageJ();

@@ -3,6 +3,7 @@ package net.haesleinhuepf.clij2.plugins;
 import ij.IJ;
 import ij.ImagePlus;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
+import net.haesleinhuepf.clij2.CLIJ2;
 import net.haesleinhuepf.clij2.plugins.StandardDeviationOfAllPixels;
 import net.haesleinhuepf.clijx.CLIJx;
 import org.junit.Test;
@@ -14,14 +15,14 @@ public class StandardDeviationOfAllPixelsTest {
 
     @Test
     public void testStdDev() {
-        CLIJx clijx = CLIJx.getInstance();
+        CLIJ2 clij2 = CLIJ2.getInstance();
         ImagePlus imp = IJ.openImage("src/test/resources/blobs.tif");
 
-        ClearCLBuffer input = clijx.push(imp);
+        ClearCLBuffer input = clij2.push(imp);
 
-        double stdDev = StandardDeviationOfAllPixels.standardDeviationOfAllPixels(clijx, input);
+        double stdDev = clij2.standardDeviationOfAllPixels(input);
 
-        clijx.release(input);
+        clij2.release(input);
 
         double stdDevRef = imp.getStatistics().stdDev;
 

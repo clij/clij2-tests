@@ -7,6 +7,7 @@ import ij.gui.NewImage;
 import net.haesleinhuepf.clij.CLIJ;
 import net.haesleinhuepf.clij.clearcl.ClearCLBuffer;
 import net.haesleinhuepf.clij.kernels.Kernels;
+import net.haesleinhuepf.clij2.CLIJ2;
 import net.haesleinhuepf.clijx.plugins.CrossCorrelation;
 import net.imglib2.realtransform.AffineTransform3D;
 import org.junit.Test;
@@ -73,7 +74,8 @@ public class CrossCorrelationTest {
                 vfXImp.getProcessor().setf(x, y, 3);
             }
         }
-        CLIJ clij = CLIJ.getInstance();
+        CLIJ2 clij2 = CLIJ2.getInstance();
+        CLIJ clij = clij2.getClij();
 
         ClearCLBuffer input = clij.push(imp);
         ClearCLBuffer vfYBuffer = clij.push(vfXImp);
@@ -101,7 +103,7 @@ public class CrossCorrelationTest {
 
 
         for (int i = -3; i <=3; i++) {
-            CrossCorrelation.crossCorrelation(clij, input, meanInput, shifted, meanShifted, crossCorrCoeff, scanRange, i, 1);
+            CrossCorrelation.crossCorrelation(clij2, input, meanInput, shifted, meanShifted, crossCorrCoeff, scanRange, i, 1);
             Kernels.copySlice(clij, crossCorrCoeff, crossCorrCoeffStack, i + maxDelta);
         }
 
@@ -134,7 +136,9 @@ public class CrossCorrelationTest {
         ImagePlus imp = IJ.openImage("src/test/resources/blobs.tif");
         IJ.run(imp, "32-bit", "");
 
-        CLIJ clij = CLIJ.getInstance();
+
+        CLIJ2 clij2 = CLIJ2.getInstance();
+        CLIJ clij = clij2.getClij();
 
         ClearCLBuffer input = clij.push(imp);
 
@@ -161,7 +165,7 @@ public class CrossCorrelationTest {
 
 
         for (int i = -3; i <=3; i++) {
-            CrossCorrelation.crossCorrelation(clij, input, meanInput, shifted, meanShifted, crossCorrCoeff, scanRange, i, 1);
+            CrossCorrelation.crossCorrelation(clij2, input, meanInput, shifted, meanShifted, crossCorrCoeff, scanRange, i, 1);
             Kernels.copySlice(clij, crossCorrCoeff, crossCorrCoeffStack, i + maxDelta);
         }
 
